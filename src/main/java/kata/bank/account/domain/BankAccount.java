@@ -9,13 +9,13 @@ import kata.bank.account.TransactionTypeEnum;
 
 /**
  * 
- * @author pc
- * BankAccount class, allows calculating new balance after withdraw and reports transaction
+ * @author pc BankAccount class, allows calculating new balance after withdraw
+ *         and reports transaction
  */
 public class BankAccount {
 
-	/** 
-	 * D	ate formatter yyyy/MM/dd
+	/**
+	 * D ate formatter yyyy/MM/dd
 	 */
 	private static final String DATE_FORMAT = "yyyy/MM/dd";
 
@@ -65,16 +65,16 @@ public class BankAccount {
 		MoneyTransaction transaction = new MoneyTransaction(withdrawValue);
 		// The new balance is affected to the bankAcount
 		this.accountBalance = transaction.performWithdraw(accountBalance);
-		
-			recordTransaction(withdrawValue, transaction.getStatus());
-		
+
+		recordTransaction(withdrawValue, transaction.getStatus());
+
 	}
 
 	private void recordTransaction(Amount withdrawValue, String status) {
 		Date date = new Date();
 		// Recording history of the transaction into a map
-		String messageHistory = sdf.format(date) + " : "+status + " " + TransactionTypeEnum.WITHDRAW.name() + " Amount : "
-				+ withdrawValue.moneyValue() + " New balance : " + accountBalance.moneyValue();
+		String messageHistory = sdf.format(date) + " : " + status + " " + TransactionTypeEnum.WITHDRAW.name()
+				+ " Amount : " + withdrawValue.moneyValue() + " New balance : " + accountBalance.moneyValue();
 		accountHistory = new HashMap<String, String>();
 		accountHistory.put(sdf.format(date), messageHistory);
 	}

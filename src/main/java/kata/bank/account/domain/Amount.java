@@ -9,8 +9,7 @@ import kata.bank.account.FunctionnalException;
 
 /**
  * 
- * @author pc
- *Ammount class 
+ * @author pc Ammount class
  */
 public class Amount {
 
@@ -42,12 +41,12 @@ public class Amount {
 	 * 
 	 * @param otherAmount
 	 * @return
-	 * @throws FunctionnalException 
+	 * @throws FunctionnalException
 	 */
 	public Amount minusAmount(Amount otherAmount) throws FunctionnalException {
-		if (! this.amountCurrency.equals(otherAmount.amountCurrency)) {
-			throw new FunctionnalException("The currency of the amount to withdraw : (" + otherAmount.amountCurrency 
-					+") is not the same than the currency of the balance :" + this.amountCurrency);
+		if (!this.amountCurrency.equals(otherAmount.amountCurrency)) {
+			throw new FunctionnalException("The currency of the amount to withdraw : (" + otherAmount.amountCurrency
+					+ ") is not the same than the currency of the balance :" + this.amountCurrency);
 		}
 		return getAmountOf(this.amountValue.subtract(otherAmount.amountValue), Currency.getInstance(Locale.FRANCE));
 	}

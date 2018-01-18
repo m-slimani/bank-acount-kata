@@ -7,23 +7,20 @@ import kata.bank.account.FunctionnalException;
 
 /**
  * 
- * @author pc 
- * Money transaction class. Declared with a value
+ * @author pc Money transaction class. Declared with a value
  */
 public class MoneyTransaction {
-	
-	private static final Logger LOGGER = Logger.getLogger(MoneyTransaction.class.getName() );
-	
+
+	private static final Logger LOGGER = Logger.getLogger(MoneyTransaction.class.getName());
+
 	private static final String TRANSACTION_STATUS_SUCCESS = "SUCCESS";
 	private static final String TRANSACTION_STATUS_FAILLED = "FAILLED";
-	
 
-	
 	/**
 	 * Value to perform on the balance
 	 */
 	private Amount value;
-	
+
 	/**
 	 * Value to perform on the balance
 	 */
@@ -31,6 +28,7 @@ public class MoneyTransaction {
 
 	/**
 	 * Declare the value of the transaction
+	 * 
 	 * @param value
 	 */
 	public MoneyTransaction(Amount value) {
@@ -53,8 +51,8 @@ public class MoneyTransaction {
 		}
 		return currentBalance;
 	}
-	
-	public String getStatus () {
+
+	public String getStatus() {
 		return status;
 	}
 
