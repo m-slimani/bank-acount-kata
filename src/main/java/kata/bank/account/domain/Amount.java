@@ -15,7 +15,6 @@ import kata.bank.account.FunctionnalException;
 public class Amount {
 	
 	DecimalFormatSymbols symboles = new DecimalFormatSymbols(Locale.FRANCE);
-//	symboles.setDecimalSeparator(',');
 
 	/**
 	 * Decimal format with two digits after comma "#.00"

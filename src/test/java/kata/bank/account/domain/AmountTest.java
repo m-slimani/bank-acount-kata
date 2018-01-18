@@ -14,8 +14,6 @@ import kata.bank.account.FunctionnalException;
 public class AmountTest {
 
 	private static final Logger LOGGER = Logger.getLogger(AmountTest.class.getName());
-	
-	
 
 	@Test
 	public void TestWithDraw_PositiveBalance() throws FunctionnalException {

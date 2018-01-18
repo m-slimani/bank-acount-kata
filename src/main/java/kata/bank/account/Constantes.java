@@ -7,6 +7,8 @@ package kata.bank.account;
  */
 public class Constantes {
 	
+	
+	
 	public static final String ZERO_DECIMAL_CHAIN = "0.00";
 	public static final String TEN_DECIMAL_CHAIN = "10.00";
 	public static final String FIFTY_DECIMAL_CHAIN = "50.00";
@@ -26,9 +28,4 @@ public class Constantes {
 	
 	public static final String TRANSACTION_TYPE_WITHDRAW = "Withdraw";
 	
-
-	
-	
-	
-
 }
